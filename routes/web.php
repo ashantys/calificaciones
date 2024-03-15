@@ -20,3 +20,9 @@ Route::post('/store', [MateriaController::class, 'store'])->name('materias.store
 
 // Ruta para mostrar el formulario de edición de una materia en específico
 Route::get('/edit/{id}', [MateriaController::class, 'edit'])->name('materias.edit');
+
+// Ruta para actualizar una materia en específico
+Route::put('/update/{id}', [MateriaController::class, 'update'])->name('materias.update');
+
+//Ruta para mostrar los detalles de una materia específico
+Route::get('/show/{id}', [MateriaController::class, 'show'])->name('materias.show');

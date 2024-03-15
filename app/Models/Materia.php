@@ -11,6 +11,7 @@ class Materia extends Model
 
     protected $fillable = ['_token', 'name'];
 
+
     public function actividades()
     {
         return $this->hasMany(Actividad::class);

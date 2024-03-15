@@ -40,6 +40,7 @@ class MateriaController extends Controller
      */
     public function show(string $id)
     {
+        $materia = Materia::findOrFail($id);
         return view('materias.show', compact('materia'));
     }
 
@@ -55,13 +56,15 @@ class MateriaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Materia $materia)
+    public function update(Request $request, $id)
     {
-        $data = $request->except('_token');
+        $validatedData = $request->validate([
+            'name' => 'required',
+        ]);
 
-        $materia->update($data);
+        Materia::whereId($id)->update($validatedData);
 
-        return redirect()->route('materias.index')->with('success', 'Materia actualizada exitosamente.');
+        return redirect()->route('materias.index')->with('success', 'Materia actualizada correctamente.');
     }
 
     /**
