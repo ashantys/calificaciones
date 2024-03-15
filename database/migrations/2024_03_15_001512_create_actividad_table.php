@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('actividad', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('subject_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('subject_id');
+            $table->foreign('subject_id')->references('id')->on('materias');
             $table->string('type');
             $table->string('grade')->nullable();
             $table->date('date');

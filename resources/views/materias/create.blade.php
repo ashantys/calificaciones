@@ -9,8 +9,8 @@
 
                 @csrf
                 <div class="mb-6">
-                    <label for="nombre" class="block mb-4 text-sm font-medium leading-6 text-slate-700">Nombre de la Materia</label>
-                    <input type="text" name="nombre" id="nombre" class="w-full px-3 py-2 border rounded-md showdo-sm focus:outline-none focus:border-cyan-500" required>
+                    <label for="name" class="block mb-4 text-sm font-medium leading-6 text-slate-700">Nombre de la Materia</label>
+                    <input type="text" name="name" id="name" class="w-full px-3 py-2 border rounded-md showdo-sm focus:outline-none focus:border-cyan-500" required>
                 </div>
                 <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">Guardar</button>
             </form>

@@ -9,6 +9,8 @@ class Materia extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['_token', 'name'];
+
     public function actividades()
     {
         return $this->hasMany(Actividad::class);

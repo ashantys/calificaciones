@@ -16,8 +16,7 @@
             <tbody>
                 @foreach ($materias as $materia)
                     <tr>
-                        <td class="border border-gray-300 px-4 py-2">{{ $materia->id }}</td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $materia->nombre }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $materia->name }}</td>
                         <td class="border border-gray-300 px-4 py-2">
                             <a href="{{ route('materias.show', $materia->id) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-2 rounded mr-2">Ver</a>
                             <a href="{{ route('materias.edit', $materia->id) }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-2 rounded mr-2">Editar</a>

@@ -28,8 +28,9 @@ class MateriaController extends Controller
     public function store(Request $request)
     {
         // Validación de datos del formulario
+        $data = $request->except('_token');
 
-        Materia::create($request->all());
+        Materia::create($data);
 
         return redirect()->route('materias.index')->with('success', 'Materia creada exitosamente.');
     }
