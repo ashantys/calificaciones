@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('calificacions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('activity_id')->constrained()->onDelete('cascade');
+            $table->decimal('grade', 5, 2); // Puedes ajustar la precisión según tus necesidades
             $table->timestamps();
         });
     }
