@@ -2,12 +2,13 @@
 
 @section('content')
     <div class="container mx-auto">
-        <h1 class="text-3xl font-semibold mb-4">Listado de Materias</h1>
-        <a href="{{ route('materias.create') }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Materia</a>
-        <table class="w-full border-collapse border border-gray-300">
+        <h1 class="text-3xl font-semibold m-8">Listado de Materias</h1>
+        <div class="flex justify-end items-center mb-4">
+            <a href="{{ route('materias.create') }}" class=" bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mb-4 inline-block">Agregar Materia</a>
+        </div>
+        <table class="table-auto w-full border border-collapse  border-gray-300">
             <thead>
                 <tr>
-                    <th class="border border-gray-300 px-4 py-2">ID</th>
                     <th class="border border-gray-300 px-4 py-2">Nombre</th>
                     <th class="border border-gray-300 px-4 py-2">Acciones</th>
                 </tr>

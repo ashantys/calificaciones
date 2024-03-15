@@ -9,5 +9,9 @@ Route::get('/', function () {
 
 Route::resource('materias', MateriaController::class);
 
-// Ruta para mostrar el listado de superhéroes (índice)
+// Ruta para mostrar el listado de materias (índice)
 Route::get('/index', [MateriaController::class, 'index'])->name('materias.index');
+
+// Ruta para registrar una materia (índice)
+Route::get('/create', [MateriaController::class, 'create'])->name('materias.create');
+
