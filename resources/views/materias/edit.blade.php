@@ -1,5 +1,3 @@
-<!-- resources/views/materias/edit.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
@@ -9,10 +7,10 @@
             @csrf
             @method('PUT')
             <div class="mb-4">
-                <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre de la Materia:</label>
-                <input type="text" name="nombre" id="nombre" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{ $materia->nombre }}" required>
+                <label for="name" class="block text-gray-700 font-bold mb-2">Nombre de la Materia</label>
+                <input type="text" name="name" id="name" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-cyan-500" value="{{ $materia->name }}" required>
             </div>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
+            <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
         </form>
     </div>
 @endsection

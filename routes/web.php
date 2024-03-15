@@ -17,3 +17,6 @@ Route::get('/create', [MateriaController::class, 'create'])->name('materias.crea
 
 // Ruta para almacenar (store) los datos enviados desde el formulario de creación
 Route::post('/store', [MateriaController::class, 'store'])->name('materias.store');
+
+// Ruta para mostrar el formulario de edición de una materia en específico
+Route::get('/edit/{id}', [MateriaController::class, 'edit'])->name('materias.edit');

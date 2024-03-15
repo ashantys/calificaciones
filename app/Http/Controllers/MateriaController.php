@@ -48,15 +48,18 @@ class MateriaController extends Controller
      */
     public function edit(string $id)
     {
+        $materia = Materia::findOrFail($id);
         return view('materias.edit', compact('materia'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Materia $id)
+    public function update(Request $request, Materia $materia)
     {
-        $id->update($request->all());
+        $data = $request->except('_token');
+
+        $materia->update($data);
 
         return redirect()->route('materias.index')->with('success', 'Materia actualizada exitosamente.');
     }
