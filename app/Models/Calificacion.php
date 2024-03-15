@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Calificacion extends Model
 {
     use HasFactory;
+
+    public function actividad()
+    {
+        return $this->belongsTo(Actividad::class);
+    }
 }
